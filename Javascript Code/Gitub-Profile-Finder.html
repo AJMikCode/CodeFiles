@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github Profile Finder Using AJAX</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<style type="text/css">
+		img{
+			width: 100%;
+		}
+		.badge{
+			width: 100px;
+			height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<form id="form1">
+			<div class="form-group">
+				<label>Github Username:</label>
+				<input type="text" id="username" class="form-control">
+			</div>
+		</form>
+		<div id="profile"></div>
+	</div>
+	<script>
+		function getProfile(e) {
+			e.preventDefault();
+			debugger;
+			var username = document.getElementById("username").value;
+			if(!username || username == ""){
+				username = "mojodna";
+			}
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(xhttp.readyState == 4 && xhttp.status == 200){
+					var user = JSON.parse(xhttp.responseText);
+					document.getElementById("profile").innerHTML = `
+					<div class="card">
+						<div class="card-header">
+							${user.name}
+						</div>
+
+					<div class="card-body">
+						<div class="row">
+							<div class="col-3">
+							<img src="${user.avatar_url}">
+								</div>
+							<div class="col-9">
+							<span class="badge badge-primary">Public repos ${user.public_repos}</span>
+							<span class="badge badge-danger">Public gists ${user.public_gists}</span>
+							<br><br>
+										<ul class="list-group">
+											<li class="list-group-item">website: ${user.blog}</li>
+											<li class="list-group-item">website: ${user.email}</li>
+											<li class="list-group-item">website: ${user.bio}</li>
+											<li class="list-group-item">website: ${user.location}</li>
+										</ul>
+										<br>
+										<a class="btn btn-primary" target=" _blank" href="${user.html_url}"> Visit Github</a>
+								</div>
+							</div>
+						</div>
+					</div> `;
+				}
+			}
+			xhttp.open("GET", "https://api.github.com/users", true);
+			xhttp.send();
+		}	
+		document.getElementById("form1").addEventListener('submit', getProfile, false);
+	</script>
+</body>
+</html>

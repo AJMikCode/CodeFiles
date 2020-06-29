@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery | DOM Manipulation</title>
+	<script
+	src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<input type="text" id="input1">
+<br><br>
+<ul id="List1">
+	<li>List Item 1</li>
+	<li>List Item 2</li>
+	<li>List Item 3</li>
+	<li>List Item 4</li>
+	<li>List Item 5</li>
+</ul>
+<script>
+	$(document).ready(function(){
+		$("#div1").text("Hello World");
+		$("#div2").html("<h1>Hello World!</h1>");
+		$("#input1").val("Hello World");
+		//alert($("#div1").text());
+		$("#div1").attr("class" ,"something");
+		$("#div1").removeAttr("class");
+		$("#List1").append("<li>Hello</li>");
+		$("#List1").prepend("<li>Hello</li>");
+		$("#List1").before("<p>Before The List</p>");
+		$("#List1").after("<p>After The List</p>");
+
+	})
+</script>
+</body>
+</html>

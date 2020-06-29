@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms and Inputs</title>
+</head>
+<body>
+	<h1 style="font-size: 100px">Registration Form</h1>
+	<form action="POST" action="index.php">
+	<fieldset>
+		<legend>Account</legend>
+	<label>Name</label><br>
+	<input type="text" name="name" size="30" placeholder="Full Name"required>
+	<br><br>
+
+	<label>Email</label><br>
+	<input type="email" name="email" size="20"placeholder="Email"autofocus>
+	<br><br>
+
+	<label>Password</label><br>
+	<input type="password" name="password" maxlength="8" size="10">
+	<br><br>
+
+	<label>Birthday</label><br>
+	<input type="date" name="Birthday" value="2002-05-26" min="2002-05-26" width="100" height="100">
+
+	</fieldset>
+
+<fieldset>
+	<legend>Optional</legend>
+	<label>Location</label><br>
+	<select name="location">
+		<option value="MA">MA</option>
+		<option value="NY">NY</option>
+		<option value="TX" selected>TX</option>
+	</select>
+	<br><br>
+
+	<label>Gender</label><br>
+	<input type="radio" name="Gender" value="Male">
+	Male
+	<input type="radio" name="Gender" value="Female">
+	Female
+	<br><br>
+
+	<label>Interests</label><br>
+	<input type="checkbox" name="Interests" value="Marvel">
+	Marvel
+	<input type="checkbox" name="Interests" value="DC">
+	DC
+	<input type="checkbox" name="Interests" value="Deadpool">
+	Deadpool
+	<input type="checkbox" name="Interests" value="Batman" checked>
+	Batman
+	<br><br>
+
+</fieldset>
+
+	<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

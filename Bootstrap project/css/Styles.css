@@ -1,0 +1,147 @@
+#home2{
+	background: #EA4335;
+	border: #EA4335;
+	box-shadow: 3px 3px #b30000;
+}
+#home2:hover{
+	background: #ff0000;
+}
+#home1{
+	background: #26D701;
+	border: #26D701;
+	box-shadow: 3px 3px #028A0F;
+}
+#home1:hover{
+	background: #4DED30;
+}
+.navbar{
+	margin: 0;
+	color: #fff;
+ 	text-decoration: none;
+ 	font-weight: bold;
+ 	background-color: #50C078;
+}
+.navbar a{
+	color: #fff;
+	margin-bottom: 3px;
+}
+.navbar a:hover{
+	border-bottom: #fff 3px solid;
+	margin-bottom: 0px;
+}
+.jumbotron{
+	background-image: url("C:/Users/ajmik/Pictures/Hello.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #333;
+	color:white;
+	text-align: center;
+	font-family: Arial;
+	border: 1px #333 solid;
+	image-rendering: crisp-edges;
+}
+.jumbotron-sub{
+
+}
+.jumbotron-main h1{
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+.jumbotron-main p.lead{
+	font-size: 25px;
+	margin-bottom: 40px;
+}
+.nav-item{
+	text-align: right;
+}
+.container-fluid{
+	text-align: center;
+}
+h3{
+	font-size: 20px;
+}
+.row{
+width: 100%
+}
+.mid-section{
+	text-align: center;
+	background-color: #50C078;
+}
+.mid-section h1{
+	font-size: 50px;
+}
+.photo-section{
+	text-align: center;
+}
+.List{
+	text-align: left;
+}
+.list-group-item{
+	height: 75px;
+	text-align: center;
+}
+.main-footer{
+	background-color: #76FC90;
+	border: 1px #228B22 solid; 
+}
+.main-footer ul li{
+	padding: 10px;
+}
+.v-divider{
+	width: 1px;
+	height: 100%;
+	border-left: 1px solid gray;
+}
+.card-text{
+	text-align: left;
+}
+.title{
+	font-weight: bold;
+	font: Tahoma;
+	font-size: 20px;
+}
+.about-Gig{
+	text-align: left;
+}
+.about-Card{
+	border: 2px #90ee90 solid;
+}
+.services-Card .card-header{
+	text-align: left;
+}
+.btn-warning{
+	background: #dab71f;
+	border: #dab71f;
+	box-shadow: 3px 3px #FADA5E;
+}
+.btn-warning:hover{
+	background-color: #FFFF00;
+}
+.btn-danger{
+	background: #c94d4d;
+	border: #c94d4d;
+	box-shadow: 3px 3px #b30000;
+}
+.btn-danger:hover{
+background: #ff0000;
+}
+.btn-success{
+	background: #406244;
+	border: #406244;
+	box-shadow: 3px 3px #028A0F;
+}
+.btn-success:hover{
+	background: #4DED30;
+}
+.services-Card{
+	border: 2px #90ee90 solid;
+}
+.contactus-Card .card-header{
+	text-align: left;
+}
+.align-Form{
+	text-align: left;
+}
+label{
+	font-weight: bold;
+}
